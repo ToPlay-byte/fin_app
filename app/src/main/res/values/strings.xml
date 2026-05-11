@@ -1,11 +1,22 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="action_go">Go</string>
-    <string name="baking_title">Baking with Gemini</string>
-    <string name="label_prompt">Prompt</string>
-    <string name="prompt_placeholder">Provide a recipe for the baked goods in the image</string>
-    <string name="image1_description">Cupcake</string>
-    <string name="image2_description">Cookies</string>
-    <string name="image3_description">Cake</string>
-    <string name="results_placeholder">(Results will appear here)</string>
+    <string name="app_name">Контроль фінансів</string>
+    <string name="balance">Поточний баланс: %1$s ₴</string>
+    <string name="income">Доходи: %1$s ₴</string>
+    <string name="expense">Витрати: %1$s ₴</string>
+    <string name="add_transaction">Додати операцію</string>
+    <string name="edit_transaction">Редагувати операцію</string>
+    <string name="history">Історія</string>
+    <string name="statistics">Статистика</string>
+    <string name="amount">Сума</string>
+    <string name="category">Категорія</string>
+    <string name="date">Дата</string>
+    <string name="note">Опис (необов\'язково)</string>
+    <string name="save">Зберегти</string>
+    <string name="delete">Видалити</string>
+    <string name="cancel">Скасувати</string>
+    <string name="all">Усі</string>
+    <string name="type_income">Дохід</string>
+    <string name="type_expense">Витрата</string>
+    <string name="error_invalid_amount">Введіть коректну суму</string>
+    <string name="error_empty_category">Виберіть категорію</string>
 </resources>
