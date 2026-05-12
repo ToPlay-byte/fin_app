@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16.dp">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16.dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupStatPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16.dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStatAllTime"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Увесь час" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStatMonth"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Цей місяць" />
+        </com.google.android.material.chip.ChipGroup>
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -34,19 +59,43 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4.dp"
-                    android:text="@string/income"
+                    android:text="@string/income_summary"
                     android:textColor="#4CAF50" />
 
                 <TextView
                     android:id="@+id/tvStatExpense"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/expense"
+                    android:text="@string/expense_summary"
                     android:textColor="#F44336" />
+
+                <TextView
+                    android:id="@+id/tvStatCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.dp"
+                    android:text="Кількість операцій: 0"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <TextView
+                    android:id="@+id/tvStatLargestCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Найбільша категорія: -"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <Button
+                    android:id="@+id/btnExportPdf"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.dp"
+                    android:text="Експорт у PDF" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
+            android:id="@+id/labelCatStats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8.dp"
@@ -58,6 +107,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/tvEmptyStat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32.dp"
+            android:text="Недостатньо даних для відображення статистики"
+            android:visibility="gone" />
 
     </LinearLayout>
 </ScrollView>

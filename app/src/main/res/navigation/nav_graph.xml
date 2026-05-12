@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.myapplication.ui.main.HomeFragment"
+        android:name="com.example.finapp.ui.main.HomeFragment"
         android:label="Головна"
         tools:layout="@layout/fragment_home">
         <action
@@ -20,13 +20,13 @@
 
     <fragment
         android:id="@+id/addTransactionFragment"
-        android:name="com.example.myapplication.ui.add.AddTransactionFragment"
+        android:name="com.example.finapp.ui.add.AddTransactionFragment"
         android:label="Додати операцію"
         tools:layout="@layout/fragment_add" />
 
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.example.myapplication.ui.history.HistoryFragment"
+        android:name="com.example.finapp.ui.history.HistoryFragment"
         android:label="Історія"
         tools:layout="@layout/fragment_history">
         <action
@@ -36,14 +36,40 @@
 
     <fragment
         android:id="@+id/statisticsFragment"
-        android:name="com.example.myapplication.ui.statistics.StatisticsFragment"
+        android:name="com.example.finapp.ui.statistics.StatisticsFragment"
         android:label="Статистика"
         tools:layout="@layout/fragment_statistics" />
 
     <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.finapp.ui.settings.SettingsFragment"
+        android:label="Налаштування"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_plansFragment"
+            app:destination="@id/plansFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/plansFragment"
+        android:name="com.example.finapp.ui.plans.PlansFragment"
+        android:label="Планові платежі"
+        tools:layout="@layout/fragment_plans">
+        <action
+            android:id="@+id/action_plansFragment_to_addPlanFragment"
+            app:destination="@id/addPlanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPlanFragment"
+        android:name="com.example.finapp.ui.plans.AddPlanFragment"
+        android:label="Новий шаблон"
+        tools:layout="@layout/fragment_add_plan" />
+
+    <fragment
         android:id="@+id/editTransactionFragment"
-        android:name="com.example.myapplication.ui.edit.EditTransactionFragment"
-        android:label="Редагувати"
+        android:name="com.example.finapp.ui.edit.EditTransactionFragment"
+        android:label="Редагування"
         tools:layout="@layout/fragment_add">
         <argument
             android:name="transactionId"

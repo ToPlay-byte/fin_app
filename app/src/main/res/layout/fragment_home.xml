@@ -37,7 +37,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/income"
+                    android:text="@string/income_summary"
                     android:textColor="#4CAF50" />
 
                 <TextView
@@ -45,7 +45,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/expense"
+                    android:text="@string/expense_summary"
                     android:textColor="#F44336" />
             </LinearLayout>
         </LinearLayout>

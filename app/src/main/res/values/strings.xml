@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Контроль фінансів</string>
-    <string name="balance">Поточний баланс: %1$s ₴</string>
-    <string name="income">Доходи: %1$s ₴</string>
-    <string name="expense">Витрати: %1$s ₴</string>
+    <string name="balance">Баланс: %1$s</string>
+    <string name="income_summary">Доходи: %1$s</string>
+    <string name="expense_summary">Витрати: %1$s</string>
     <string name="add_transaction">Додати операцію</string>
     <string name="edit_transaction">Редагувати операцію</string>
     <string name="history">Історія</string>
